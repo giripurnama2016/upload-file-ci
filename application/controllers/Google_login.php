@@ -23,7 +23,7 @@ class Google_login extends CI_Controller {
 
   $google_client->setClientId('1028856007772-kdt7htgu1otootthqod2i7uv85igmgg1.apps.googleusercontent.com'); //Define your ClientID
 
-  $google_client->setClientSecret('g7kBMDyfPOQUx61jVhgnWskw'); //Define your Client Secret Key
+  $google_client->setClientSecret('g7kBMDyfPOQUx61jVhgnWskw1'); //Define your Client Secret Key
 
   $google_client->setRedirectUri('http://localhost/upload-file-ci/index.php/google_login/login'); //Define your Redirect Uri
 
@@ -97,7 +97,7 @@ class Google_login extends CI_Controller {
           'nama'=>'oki',
           'email'=>'giripurnama@yahoo.com'
       );
-      
+
    $this->load->view('google_login', $data);
   }
  }
