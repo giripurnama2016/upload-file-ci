@@ -43,10 +43,6 @@ CREATE TABLE `chat_user` (
 -- Dumping data for table `chat_user`
 --
 
-INSERT INTO `chat_user` (`user_id`, `login_oauth_uid`, `first_name`, `last_name`, `email_address`, `profile_picture`, `created_at`, `updated_at`) VALUES
-(1, '101297194663332918151', 'Giri', 'Purnama', 'giripurnama@gmail.com', 'https://lh3.googleusercontent.com/a-/AOh14GgD1g70z8z9Z6z-5qm4N3ktrTuZQrEaVNegfbtiBg=s96-c', '2020-11-10 08:31:13', '2020-11-10 09:15:02'),
-(2, '118438506451602602601', 'Giri', 'Purnama', 'giripurnama2016@gmail.com', 'https://lh3.googleusercontent.com/a-/AOh14GioLNGEM0RD2chL-LZBLOb2iVg6ZbMzTCmBCeAGng=s96-c', '2020-11-10 08:36:19', '0000-00-00 00:00:00'),
-(3, '103011345439019062527', 'Nida', 'Priana', 'nidapriana74@gmail.com', 'https://lh3.googleusercontent.com/a-/AOh14Gg59xum13wLHXcPQLsbSvHwn4PbxG50PRFMDw0i=s96-c', '2020-11-10 08:36:56', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
