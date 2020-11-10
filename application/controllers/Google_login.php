@@ -41,6 +41,12 @@ class Google_login extends CI_Controller {
 
     $current_datetime = date('Y-m-d H:i:s');
 
+     if(!$this->google_login_model->cek_user($data['email'])){
+        redirect('google_login/logout_true');
+
+     }
+
+
     if($this->google_login_model->Is_already_register($data['id']))
     {
      //update data
@@ -91,6 +97,15 @@ class Google_login extends CI_Controller {
   $this->session->unset_userdata('user_data');
 
   redirect('google_login/login');
+ }
+
+ function logout_true()
+ {
+  $this->session->unset_userdata('access_token');
+
+  $this->session->unset_userdata('user_data');
+
+  $this->load->view('google_no_register');
  }
 
  function tambah_user(){

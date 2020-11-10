@@ -26,6 +26,20 @@ class Google_login_model extends CI_Model
   $this->db->insert('chat_user', $data);
  }
 
+ function cek_user($nm){
+    $this->db->where('email', $nm);
+    $query = $this->db->get('tambah_user');
+    if($query->num_rows() > 0)
+    {
+     return true;
+    }
+    else
+    {
+     return false;
+    }
+
+ }
+
  function tambah_user_data($data)
  {
   $this->db->insert('tambah_user', $data);
