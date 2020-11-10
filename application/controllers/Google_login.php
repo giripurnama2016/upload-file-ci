@@ -9,6 +9,12 @@ class Google_login extends CI_Controller {
   $this->load->model('google_login_model');
  }
 
+ function index(){
+
+    redirect('google_login/login');
+
+ }
+
  function login()
  {
   include_once APPPATH . "libraries/vendor/autoload.php";
@@ -82,10 +88,16 @@ class Google_login extends CI_Controller {
   {
    $login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="'.base_url().'assets/google-sign-in.png" /></a>';
    $data['login_button'] = $login_button;
+
    $this->load->view('google_login', $data);
   }
   else
   {
+      $data = array(
+          'nama'=>'oki',
+          'email'=>'giripurnama@yahoo.com'
+      );
+      
    $this->load->view('google_login', $data);
   }
  }
