@@ -25,5 +25,10 @@ class Google_login_model extends CI_Model
  {
   $this->db->insert('chat_user', $data);
  }
+
+ function tambah_user_data($data)
+ {
+  $this->db->insert('tambah_user', $data);
+ }
 }
 ?>

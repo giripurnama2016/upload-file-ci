@@ -17,7 +17,7 @@ class Google_login extends CI_Controller {
 
   $google_client->setClientId('1028856007772-kdt7htgu1otootthqod2i7uv85igmgg1.apps.googleusercontent.com'); //Define your ClientID
 
-  $google_client->setClientSecret('g7kBMDyfPOQUx61jVhgnWskw1'); //Define your Client Secret Key
+  $google_client->setClientSecret('g7kBMDyfPOQUx61jVhgnWskw'); //Define your Client Secret Key
 
   $google_client->setRedirectUri('http://localhost/upload-file-ci/index.php/google_login/login'); //Define your Redirect Uri
 
@@ -91,6 +91,23 @@ class Google_login extends CI_Controller {
   $this->session->unset_userdata('user_data');
 
   redirect('google_login/login');
+ }
+
+ function tambah_user(){
+    $user_data = array(
+   // 'user_id'=>'',
+    'nama'=>$this->input->post('nama'),
+    'pass'=>$this->input->post('pass'),
+    'email'=>$this->input->post('email')
+    );
+
+    $this->google_login_model->tambah_user_data($user_data);
+    $this->load->view('tambah_user');
+ }
+
+ function tambah_user_form(){
+
+    $this->load->view('tambah_user');
  }
  
 }
