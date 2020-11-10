@@ -40,6 +40,12 @@ class Google_login_model extends CI_Model
 
  }
 
+ function profil_user($email){
+    $this->db->where('email', $email);
+    return $this->db->get('tambah_user');
+
+ }
+
  function tambah_user_data($data)
  {
   $this->db->insert('tambah_user', $data);

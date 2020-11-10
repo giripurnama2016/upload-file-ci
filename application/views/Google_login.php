@@ -40,8 +40,8 @@
     echo '<div class="panel panel-info">';
     echo '<div class="panel-heading">Profil Aplikasi</div> ';
     echo '<img src="'.$user_data['profile_picture'].'" class="img-responsive img-circle img-thumbnail" />';
-    echo '<h3><b>Name : </b>'.$nama. '</h3>';
-    echo '<h3><b>Email :</b> '.$email.'</h3>';
+    echo '<h3><b>Name : </b>'.$user['nama']. '</h3>';
+    echo '<h3><b>Email :</b> '.$user['email'].'</h3>';
     echo '<h3><a href="'.base_url().'index.php/google_login/logout">Logout</h3>';
     //echo anchor('google_login/tambah_user_form','Tambah User').
     echo '</div>';
