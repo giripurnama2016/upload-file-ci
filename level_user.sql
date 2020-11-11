@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2020 at 10:26 AM
+-- Generation Time: Nov 11, 2020 at 10:58 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -25,44 +25,22 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chat_user`
+-- Table structure for table `level_user`
 --
 
-CREATE TABLE `chat_user` (
-  `user_id` int(11) NOT NULL,
-  `login_oauth_uid` varchar(100) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `email_address` varchar(100) NOT NULL,
-  `profile_picture` varchar(100) NOT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
+CREATE TABLE `level_user` (
+  `level_id` int(11) NOT NULL,
+  `level_title` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `chat_user`
+-- Dumping data for table `level_user`
 --
 
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `chat_user`
---
-ALTER TABLE `chat_user`
-  ADD PRIMARY KEY (`user_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `chat_user`
---
-ALTER TABLE `chat_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+INSERT INTO `level_user` (`level_id`, `level_title`) VALUES
+(1, 'Super Admin'),
+(2, 'Admin'),
+(3, 'User');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2020 at 03:43 PM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.2.8
+-- Generation Time: Nov 11, 2020 at 10:59 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,31 +25,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tambah_user`
+-- Table structure for table `grab_user`
 --
 
-CREATE TABLE `tambah_user` (
+CREATE TABLE `grab_user` (
   `user_id` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `pass` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL
+  `login_oauth_uid` varchar(100) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `email_address` varchar(100) NOT NULL,
+  `profile_picture` varchar(100) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tambah_user`
+-- Dumping data for table `grab_user`
 --
 
-INSERT INTO `tambah_user` (`user_id`, `nama`, `pass`, `email`) VALUES
-(1, 'giri purnama', '123', 'giripurnama@gmail.com');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `tambah_user`
+-- Indexes for table `grab_user`
 --
-ALTER TABLE `tambah_user`
+ALTER TABLE `grab_user`
   ADD PRIMARY KEY (`user_id`);
 
 --
@@ -57,10 +59,10 @@ ALTER TABLE `tambah_user`
 --
 
 --
--- AUTO_INCREMENT for table `tambah_user`
+-- AUTO_INCREMENT for table `grab_user`
 --
-ALTER TABLE `tambah_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `grab_user`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
