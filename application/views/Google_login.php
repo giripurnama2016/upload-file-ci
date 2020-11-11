@@ -42,8 +42,11 @@
     echo '<img src="'.$user_data['profile_picture'].'" class="img-responsive img-circle img-thumbnail" />';
     echo '<h3><b>Name : </b>'.$us->nama. '</h3>';
     echo '<h3><b>Email :</b> '.$us->email.'</h3>';
+    echo '<h3><b>Level :</b> '.$us->level_title.'</h3>';
     echo '<h3><a href="'.base_url().'index.php/google_login/logout">Logout</h3>';
-    //echo anchor('google_login/tambah_user_form','Tambah User').
+    if($us->level_id=='1'){
+       echo anchor('google_login/tambah_user_form','Tambah User');
+    }
     echo '</div>';
     }
     

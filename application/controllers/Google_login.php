@@ -103,7 +103,6 @@ class Google_login extends CI_Controller {
    $em = $data['email'];
 
    $datax['user']=$this->google_login_model->profil_user($em)->result();
-
    $this->load->view('google_login', $datax);
   }
  }
