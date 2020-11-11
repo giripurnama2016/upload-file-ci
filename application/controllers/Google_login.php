@@ -98,8 +98,9 @@ class Google_login extends CI_Controller {
     //       'email'=>'giripurnama@yahoo.com'
     //   );
 
-
-$em = $data['email'];
+      
+   //$dataz = $google_service->userinfo->get();
+   $em = $data['email'];
 
    $datax['user']=$this->google_login_model->profil_user($em)->result();
 
